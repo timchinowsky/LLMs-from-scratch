@@ -1,0 +1,12 @@
+# All settings require a server restart. Relative paths resolve from the working directory.
+# State directory: SQLite and role credentials. Keep outside Git. Default: state.
+data_dir = "state"
+# Development release: only this exact loopback origin is supported.
+origin = "http://127.0.0.1:8765"
+# IANA display timezone. Captures are stored in UTC. Default America/Los_Angeles.
+timezone = "America/Los_Angeles"
+# Must be true in this release. No microphone, paid API, or model download is used.
+synthetic = true
+# Positive integer, megabytes. Stop accepting finals below this free disk threshold.
+min_free_mb = 100
+# Audio, VAD, player, proxy and service settings are intentionally unavailable until implemented.

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parents-companion"
+version = "0.1.0"
+description = "Private caregiver dashboard with a durable local transcript pipeline"
+requires-python = ">=3.12"
+dependencies = ["fastapi==0.121.1", "uvicorn==0.38.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "httpx==0.28.1", "ruff==0.14.4"]
+
+[project.scripts]
+parents-companion = "parents_companion.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
